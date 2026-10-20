@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rahul Rajput — Software Engineer · Full-Stack &amp; Mobile</title>
+    <meta
+      name="description"
+      content="Rahul Rajput is a full-stack and mobile software engineer in Mohali, India — React, React Native, Node.js and TypeScript. Three-plus years shipping web and mobile products that are live on the web, Google Play and the App Store."
+    />
+    <meta name="author" content="Rahul Rajput" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#070B14" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="preload" as="font" type="font/woff2" href="/src/assets/fonts/fraunces-latin-opsz-normal.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/src/assets/fonts/geist-latin-wght-normal.woff2" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="./rahul-1122.webp"
+      imagesrcset="./rahul-720.webp 720w, ./rahul-1122.webp 1122w"
+      imagesizes="(max-width: 1023px) 350px, 430px"
+      fetchpriority="high"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rahul Rajput — Software Engineer · Full-Stack &amp; Mobile" />
+    <meta
+      property="og:description"
+      content="React, React Native and Node.js products, built end to end and shipped — on the web, Google Play and the App Store."
+    />
+    <meta property="og:image" content="./og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Runs before first paint: stored theme → OS preference → dark.
+      (function () {
+        var d = document.documentElement;
+        try {
+          var t = localStorage.getItem('rr-theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          d.setAttribute('data-theme', t);
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', t === 'light' ? '#F8F5EF' : '#070B14');
+          if (localStorage.getItem('rr-motion') === 'reduced') d.setAttribute('data-motion', 'reduced');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rahul Rajput",
+        "jobTitle": "Software Engineer (Full-Stack & Mobile)",
+        "address": { "@type": "PostalAddress", "addressLocality": "Mohali", "addressRegion": "Punjab", "addressCountry": "IN" },
+        "alumniOf": "I.K. Gujral Punjab Technical University",
+        "knowsAbout": ["React", "React Native", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "WebSockets", "Razorpay"],
+        "sameAs": ["https://www.linkedin.com/in/rahul-rajput-828a71216/", "https://github.com/RahulRajput025"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
